@@ -1,0 +1,37 @@
+<!-- src/app/results/results.component.html -->
+<!-- <div class="results">
+  <h2>Results</h2>
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Correct Answer</th>
+      <th>Your Answer</th>
+      <th>Correct?</th>
+    </tr>
+    <tr *ngFor="let result of results" (click)="viewDetail(result)">
+      <td>{{ result.question }}</td>
+      <td>{{ result.answer }}</td>
+      <td>{{ result.userAnswer }}</td>
+      <td>{{ result.isCorrect ? "Yes" : "No" }}</td>
+    </tr>
+  </table>
+</div> -->
+
+<!-- src/app/results/results.component.html -->
+<div class="results">
+  <h2>Results</h2>
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Correct Answer</th>
+      <th>Your Answer</th>
+      <th>Correct?</th>
+    </tr>
+    <tr *ngFor="let result of results" (click)="viewDetail(result)">
+      <td>{{ result.question }}</td>
+      <td>{{ result.answer }}</td>
+      <td>{{ result.userAnswer }}</td>
+      <td>{{ result.isCorrect ? "Yes" : "No" }}</td>
+    </tr>
+  </table>
+</div>

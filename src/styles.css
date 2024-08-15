@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+/* src/app/calculator/calculator.component.css */
+.calculator {
+  text-align: center;
+  margin: 20px;
+}
+
+.question {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.timer,
+.points {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+/* src/app/results/results.component.css */
+.results table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results th,
+.results td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.results tr:hover {
+  background-color: #f1f1f1;
+}

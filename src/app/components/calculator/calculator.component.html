@@ -1,0 +1,148 @@
+<!-- src/app/calculator/calculator.component.html -->
+<!-- <div class="calculator">
+  <div class="question">{{ currentQuestion }}</div>
+  <input
+    [(ngModel)]="userAnswer"
+    type="number"
+    placeholder="Enter your answer"
+  />
+  <button (click)="submitAnswer()">Submit</button>
+  <div class="timer">Time left: {{ timeLeft }}s</div>
+  <div class="points">Points: {{ points }}</div>
+</div>
+
+<div class="results">
+  <h2>Results</h2>
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Correct Answer</th>
+      <th>Your Answer</th>
+      <th>Correct?</th>
+    </tr>
+    <tr *ngFor="let result of results">
+      <td>{{ result.question }}</td>
+      <td>{{ result.answer }}</td>
+      <td>{{ result.userAnswer }}</td>
+      <td>{{ result.isCorrect ? "Yes" : "No" }}</td>
+    </tr>
+  </table>
+</div> -->
+
+<!-- src/app/calculator/calculator.component.html -->
+<!-- <div class="calculator">
+  <div class="question">{{ currentQuestion }}</div>
+  <input
+    [(ngModel)]="userAnswer"
+    type="number"
+    placeholder="Enter your answer"
+  />
+  <button (click)="submitAnswer()">Submit</button>
+  <div class="timer">Time left: {{ timeLeft }}s</div>
+  <div class="points">Points: {{ points }}</div>
+</div>
+
+<div class="results">
+  <h2>Results</h2>
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Correct Answer</th>
+      <th>Your Answer</th>
+      <th>Correct?</th>
+    </tr>
+    <tr *ngFor="let result of results">
+      <td>{{ result.question }}</td>
+      <td>{{ result.answer }}</td>
+      <td>{{ result.userAnswer }}</td>
+      <td>{{ result.isCorrect ? "Yes" : "No" }}</td>
+    </tr>
+  </table>
+</div> -->
+
+
+<!-- <div class="calculator">
+    <h1>Mental Math Game</h1>
+    <div class="best-score">Best Score: {{ bestScore }}</div>
+    <div *ngIf="gameActive">
+      <div class="question">{{ currentQuestion }}</div>
+      <input [(ngModel)]="userAnswer" type="number" placeholder="Enter your answer" />
+      <button (click)="submitAnswer()">Submit</button>
+      <div class="timer">Time left: {{ timeLeft }}s</div>
+      <div class="points">Points: {{ points }}</div>
+      <div class="controls">
+        <button (click)="pauseGame()">Pause</button>
+        <button (click)="resumeGame()" [disabled]="gameActive">Resume</button>
+        <button (click)="endGame()">End</button>
+      </div>
+    </div>
+    <div *ngIf="!gameActive">
+      <button (click)="restartGame()">Start New Game</button>
+    </div>
+  </div>
+  
+  <div class="results">
+    <h2>Results</h2>
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>Correct Answer</th>
+        <th>Your Answer</th>
+        <th>Correct?</th>
+      </tr>
+      <tr *ngFor="let result of results">
+        <td>{{ result.question }}</td>
+        <td>{{ result.answer }}</td>
+        <td>{{ result.userAnswer }}</td>
+        <td>{{ result.isCorrect ? 'Yes' : 'No' }}</td>
+      </tr>
+    </table>
+  </div> -->
+
+  <div class="calculator">
+    <h1>Mental Math Game</h1>
+    <div class="best-score">Best Score: {{ bestScore }}</div>
+  
+    <div *ngIf="!gameActive">
+      <h2>Select Difficulty</h2>
+      <button (click)="selectDifficulty('easy')">Easy</button>
+      <button (click)="selectDifficulty('medium')">Medium</button>
+      <button (click)="selectDifficulty('hard')">Hard</button>
+    </div>
+  
+    <div *ngIf="gameActive">
+      <div class="question">{{ currentQuestion }}</div>
+      <input [(ngModel)]="userAnswer" type="number" placeholder="Enter your answer" />
+      <button (click)="submitAnswer()">Submit</button>
+      <div class="timer">Time left: {{ timeLeft }}s</div>
+      <div class="points">Points: {{ points }}</div>
+      <div class="controls">
+        <button (click)="pauseGame()">Pause</button>
+        <button (click)="resumeGame()" [disabled]="gameActive">Resume</button>
+        <button (click)="endGame()">End</button>
+      </div>
+    </div>
+  
+    <div *ngIf="!gameActive && questionCount >= maxQuestions">
+      <button (click)="startNewGame()">Start New Game</button>
+    </div>
+  </div>
+  
+  <div class="results">
+    <h2>Results</h2>
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>Correct Answer</th>
+        <th>Your Answer</th>
+        <th>Correct?</th>
+      </tr>
+      <tr *ngFor="let result of results">
+        <td>{{ result.question }}</td>
+        <td>{{ result.answer }}</td>
+        <td>{{ result.userAnswer }}</td>
+        <td>{{ result.isCorrect ? 'Yes' : 'No' }}</td>
+      </tr>
+    </table>
+  </div>
+  
